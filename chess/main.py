@@ -165,7 +165,11 @@ def main():
             elif event.type == p.KEYDOWN:
                 if event.key == p.K_z:
                     if len(gs.move_log) > 0:
-                        gs.undo_move(True)
+                        if player_one ^ player_two:
+                            gs.undo_move(True)
+                            gs.undo_move(True)
+                        else:
+                            gs.undo_move(True)
                         move_made = True
                         animate = False
                         square_selected = ()
@@ -204,7 +208,11 @@ def main():
                                 elif event_.type == p.KEYDOWN:
                                     if event_.key == p.K_z:
                                         if len(gs.move_log) > 0:
-                                            gs.undo_move(True)
+                                            if player_one ^ player_two:
+                                                gs.undo_move(True)
+                                                gs.undo_move(True)
+                                            else:
+                                                gs.undo_move(True)
                                         break
                                 elif event_.type == p.QUIT:
                                     p.quit()
@@ -242,7 +250,11 @@ def main():
                                 elif event_.type == p.KEYDOWN:
                                     if event_.key == p.K_z:
                                         if len(gs.move_log) > 0:
-                                            gs.undo_move(True)
+                                            if player_one ^ player_two:
+                                                gs.undo_move(True)
+                                                gs.undo_move(True)
+                                            else:
+                                                gs.undo_move(True)
                                         break
                                 elif event_.type == p.QUIT:
                                     p.quit()
@@ -313,7 +325,11 @@ def main():
                                             elif event_.type == p.KEYDOWN:
                                                 if event_.key == p.K_z:
                                                     if len(gs.move_log) > 0:
-                                                        gs.undo_move(True)
+                                                        if player_one ^ player_two:
+                                                            gs.undo_move(True)
+                                                            gs.undo_move(True)
+                                                        else:
+                                                            gs.undo_move(True)
                                                         undo = True
                                                     break
                                             elif event_.type == p.QUIT:
@@ -356,7 +372,11 @@ def main():
                                             elif event_.type == p.KEYDOWN:
                                                 if event_.key == p.K_z:
                                                     if len(gs.move_log) > 0:
-                                                        gs.undo_move(True)
+                                                        if player_one ^ player_two:
+                                                            gs.undo_move(True)
+                                                            gs.undo_move(True)
+                                                        else:
+                                                            gs.undo_move(True)
                                                         undo = True
                                                     break
                                             elif event_.type == p.QUIT:

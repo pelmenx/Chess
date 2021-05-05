@@ -505,6 +505,10 @@ class Move(object):
                 return "O-O"
             elif self.start_col == self.end_col + 2:
                 return "O-O-O"
+            elif self.piece_captured == "--":
+                text = self.piece_moved[1] + text[:2] + "-" + text[2:]
+            elif self.piece_captured != "--":
+                text = self.piece_moved[1] + text[:2] + "x" + text[2:]
         elif self.piece_captured == "--":
             if self.piece_moved[1] == "p":
                 text = text[:2] + "-" + text[2:]
