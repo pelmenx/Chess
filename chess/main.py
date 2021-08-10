@@ -3,7 +3,7 @@ import ai
 import pygame as p
 import sys
 
-# sys.setrecursionlimit(sys.maxsize // 2**40)
+
 WIDTH = 712
 HIGHT = 522
 WIDTH_TABLE = 512
@@ -154,7 +154,7 @@ def main():
     load_images()
     square_selected = ()
     player_clicks = []
-    player_one = False
+    player_one = True
     player_two = False
     while True:
         human_turn = (gs.white_to_move and player_one) or (not gs.white_to_move and player_two)

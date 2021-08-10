@@ -3,7 +3,7 @@ import random
 PIECE_SCORE = {"K": 0, "Q": 9, "R": 5, "B": 3, "N": 3, "p": 1}
 CHECKMATE = 10000
 STALEMATE = 0
-DEPTH = 4
+DEPTH = 3
 
 
 def find_randome_move(valid_moves):
